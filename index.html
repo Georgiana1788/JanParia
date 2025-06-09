@@ -19,26 +19,55 @@
     .graffiti {
       font-family: 'Permanent Marker', cursive;
     }
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #000;
+    }
+    .lightbox-controls {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 20px;
+      color: white;
+      font-size: 1.5rem;
+      user-select: none;
+    }
+    .lightbox-controls span {
+      cursor: pointer;
+    }
   </style>
 </head>
-<body class="text-gray-800" style="background-image: url('https://placehold.co/1200x800?text=Background'); background-size: cover;">
-
-  <!-- Header -->
-  <header class="bg-black text-white shadow-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="graffiti text-3xl text-pink-500">Jan Paria INK</h1>
-      <nav class="space-x-6 text-sm">
-        <a href="#home" class="hover:text-pink-400">Home</a>
-        <a href="#art" class="hover:text-pink-400">Art</a>
-        <a href="#about" class="hover:text-pink-400">About</a>
-        <a href="#contact" class="hover:text-pink-400">Contact</a>
-      </nav>
-    </div>
-  </header>
-
+<body class="text-gray-800" style="background-image: url('images/Paria1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+ 
   <!-- Hero Section -->
   <background srchref: <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-4.fna.fbcdn.net/v/t39.30808-6/470202211_1506700584052615_3224851981050548031_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=5CZ01Q-W41wQ7kNvwHKb0Cf&amp;_nc_oc=AdkfEGPymJtDFLUB11Bod4IFiAYuxFJJI8wsn32HARejwtnkX5g3pnsvGdHgcnATRf8&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-4.fna&amp;_nc_gid=TFEFDqOG-7xEfy3liY_RFw&amp;oh=00_AfJtD1kvHyVtBTyVGxB_lNd7_3Wa0x8luB9EoJj7ZHJMmw&amp;oe=683B57B3">
-  <!-- About Section -->
+
+  <!-- Header -->
+  <section class="h-screen flex items-center justify-center text-white" style="background-image: url('images/TheKing.jpg'); background-size: cover; background-position: center;">
+  <div class="bg-black bg-opacity-60 p-10 rounded">
+    <h1 class="text-4xl graffiti text-pink-500 mb-4">Jan Paria INK</h1>
+    <p class="text-lg">Urban stories through graffiti. Emotions. Rebellion. Identity.</p>
+    <a href="#art" class="mt-6 inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded">Explore Art</a>
+  </div>
+</section>
+
+
+    <!-- About Section -->
   <section id="about" class="container mx-auto px-4 py-16">
     <h3 class="graffiti text-3xl text-pink-600 mb-6">About Jan</h3>
     <div class="background srchref: <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/470198100_1507441320645208_3055646460759990625_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=YzUNqXS37CMQ7kNvwGHkYt_&amp;_nc_oc=AdlQfO0GpUhE6ir5gx4YTQjzB3GQhYk3I0RRY9C32l67Ek-7h3HJOSmaIcQbxHs1VOA&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-2.fna&amp;_nc_gid=guCof9K87Hp-UH9YztaqYA&amp;oh=00_AfIC_B41QAl4gFw8rGpZAvS-bUguf_HUYRtpjg12JKolqg&amp;oe=683B2526">
@@ -48,94 +77,85 @@
     </div>
   </section>
 
-  <!-- Art Gallery Section -->
-  <section id="art" class="bg-gray-200 py-16">
+  <!-- Gallery Section -->
+  <section id="art" class="bg-white py-16">
     <div class="container mx-auto px-4">
-      <h3 class="graffiti text-3xl text-pink-600 mb-10 text-center">Gallery</h3>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Artwork Card -->
+      <h2 class="graffiti text-3xl text-center text-pink-600 mb-10">Art Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-  <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-    <img src="auroraparealys.jpg" alt="Nature - Inkoqnito; Kohle & Acryl" class="zoomable">
-  </div>
-  <div class="p-4">
-    <h4 class="graffiti text-xl text-pink-500">"Aurora PariaLys"</h4>
-  </div>
-</div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-  <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-    <img src="INK.jpg" alt="Nature - Inkoqnito; Kohle & Acryl" class="zoomable">
-  </div>
-  <div class="p-4">
-    <h4 class="graffiti text-xl text-pink-500">"Nature"</h4>
-  </div>
-</div>
-
-       <div class="bg-white shadow-md rounded-lg overflow-hidden">
-  <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-    <img src="INK.jpg" alt="Nature - Inkoqnito; Kohle & Acryl" class="zoomable">
-  </div>
-  <div class="p-4">
-    <h4 class="graffiti text-xl text-pink-500">"Nature"</h4>
-  </div>
-</div>
-       <div class="bg-white shadow-md rounded-lg overflow-hidden">
-  <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-    <img src="fuckflower.jpg" alt="Nature - Inkoqnito; Kohle & Acryl" class="zoomable">
-  </div>
-  <div class="p-4">
-    <h4 class="graffiti text-xl text-pink-500">"Charles Manson Fuck Flower Power"</h4>
-  </div>
-</div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-            <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4 zoomable" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.6435-9/29196717_10156217575069907_832015713051869184_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=C8ta3Nw1HtoQ7kNvwGnxlgj&amp;_nc_oc=AdnJCWRxgr4FjWWAM_w7rfJt97acBZljpynYNy1qhym_UzusQd9ALETj8mLllBAe05w&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-3.fna&amp;_nc_gid=OQ80MA2oDcjRLe5vyUjkYg&amp;oh=00_AfLZrr41oK2uYxhcINjxqvWOvNofHIGoz6i4uNDj4wRjZQ&amp;oe=685D0AF5">
-          </div>
-          <div class="p-4">
-            <h4 class="graffiti text-xl text-pink-500">"Hunter/Depp/Gonzo 40/60 Acryl"</h4>
-          </div>
+          <img src="images/Birds1.jpg" alt="Aurora PariaLys" class="zoomable w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-            <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4 zoomable" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-4.fna.fbcdn.net/v/t39.30808-6/470202211_1506700584052615_3224851981050548031_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=5CZ01Q-W41wQ7kNvwHKb0Cf&amp;_nc_oc=AdkfEGPymJtDFLUB11Bod4IFiAYuxFJJI8wsn32HARejwtnkX5g3pnsvGdHgcnATRf8&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-4.fna&amp;_nc_gid=5shCkbPy8ufsKCGjPXsajA&amp;oh=00_AfIpfp9KRrFDEY31WDi4_FJbmqqkyqTUYpL_3co46ORrZQ&amp;oe=683B57B3">
-          </div>
-          <div class="p-4">
-            <h4 class="graffiti text-xl text-pink-500">"Paria Graffiti Letters"</h4>
-          </div>
+          <img src="images/Paria1.jpg" alt="Paria Graffiti Letters" class="zoomable w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-            <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4 zoomable" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/471436296_1517060609683279_2263114701480110537_n.jpg?_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=cc71e4&amp;_nc_ohc=AuLtoaBOZggQ7kNvwG7HKXH&amp;_nc_oc=Adk3nUCEG1xtvCfqGiEQqbHS3IhgyjhZWSFobHAuMEEAqsmuGizbbK1ALe1Ukbx7NwY&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-2.fna&amp;_nc_gid=ZZ9WS_RRGJPax8bJbWkd6Q&amp;oh=00_AfJpXbqwobE2bRIW5Nl5guQkXtpLpUJnVeOzEh8zauudkQ&amp;oe=683C92E1">
-          </div>
-          <div class="p-4">
-            <h4 class="graffiti text-xl text-pink-500">"Paria Graffiti Letters"</h4>
-          </div>
+          <img src="images/INK.jpg" alt="Nature - Inkoqnito" class="zoomable w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-            <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4 zoomable" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-1.fna.fbcdn.net/v/t39.30808-6/471583552_1516333976422609_8172580434174026226_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=swGiD8RHgokQ7kNvwGI6J1u&amp;_nc_oc=Adk-FfTPlAK9ZOwBPzWhD7xv8n82lmPkmL_9fYwL-mBbvLN9ySTFxyhDur3FQYAXE9Y&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-1.fna&amp;_nc_gid=zPz6Y8imMsK3LTYXhLzpPA&amp;oh=00_AfK3Ba-prcP1JdLzMZAIxtCRGFm11UG0nTPhAZivIJ1kyw&amp;oe=683C9ED2">
-          </div>
-          <div class="p-4">
-            <h4 class="graffiti text-xl text-pink-500">"Paria Graffiti Letters"</h4>
-          </div>
-        </div> 
+          <img src="images/Dracula.jpg" alt="Charles Manson" class="zoomable w-full h-64 object-cover">
+        </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <div class="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-            <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4 zoomable" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/470198100_1507441320645208_3055646460759990625_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=YzUNqXS37CMQ7kNvwGHkYt_&amp;_nc_oc=AdlQfO0GpUhE6ir5gx4YTQjzB3GQhYk3I0RRY9C32l67Ek-7h3HJOSmaIcQbxHs1VOA&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-2.fna&amp;_nc_gid=BTYiCumzT3LgqN3tCAFFnQ&amp;oh=00_AfK_BmRsIp3utq-yTEsRo6fDBH8ENDu9hCwhmZr4ZfGUiQ&amp;oe=683C76A6">
-          </div>
-          <div class="p-4">
-            <h4 class="graffiti text-xl text-pink-500">"Paria Graffiti Letters"</h4>
-          </div>
+          <img src="images/Gonzo.jpg" alt="Hunter/Depp/Gonzo" class="zoomable w-full h-64 object-cover">
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="images/Thekingiscute.jpg" alt="The King is Cute" class="zoomable w-full h-64 object-cover">
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="images/Wall1.jpg" alt="Extra Image 1" class="zoomable w-full h-64 object-cover">
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="images/Canvas2.jpg" alt="Extra Image 2" class="zoomable w-full h-64 object-cover">
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="images/Faces3.jpg" alt="Extra Image 3" class="zoomable w-full h-64 object-cover">
         </div>
       </div>
     </div>
-    <!-- Modal pentru imagine mărită -->
-    <div id="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
-      <img id="modal-img" src="" style="max-width:90vw; max-height:90vh; border-radius:10px; box-shadow:0 0 30px #000;">
-    </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Lightbox container -->
+  <div id="lightbox">
+    <div class="lightbox-controls">
+      <span id="prev">⟨</span>
+      <span id="next">⟩</span>
+    </div>
+    <img id="lightbox-img" src="" alt="Imagine mărită">
+  </div>
+
+  <!-- Script pentru funcția de mărire și navigare -->
+  <script>
+    const zoomableImages = Array.from(document.querySelectorAll('.zoomable'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      if (index >= 0 && index < zoomableImages.length) {
+        lightboxImg.src = zoomableImages[index].src;
+        lightbox.style.display = 'flex';
+        currentIndex = index;
+      }
+    }
+
+    zoomableImages.forEach((img, index) => {
+      img.addEventListener('click', () => showImage(index));
+    });
+
+    document.getElementById('next').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage((currentIndex + 1) % zoomableImages.length);
+    });
+
+    document.getElementById('prev').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage((currentIndex - 1 + zoomableImages.length) % zoomableImages.length);
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+   <!-- Contact Section -->
   <section id="contact" class="container mx-auto px-4 py-16">
     <h3 class="graffiti text-3xl text-pink-600 mb-6">Get in Touch</h3>
     <form class="bg-white shadow-lg rounded-lg p-6 space-y-4 max-w-xl mx-auto">
@@ -160,17 +180,5 @@
     <p class="text-sm">&copy; 2025 Jan Paria INK. All rights reserved.</p>
   </footer>
 
-  <!-- Script pentru mărire imagine -->
-  <script>
-    document.querySelectorAll('.zoomable').forEach(img => {
-      img.addEventListener('click', function() {
-        document.getElementById('modal-img').src = this.src;
-        document.getElementById('modal').style.display = 'flex';
-      });
-    });
-    document.getElementById('modal').onclick = function(e) {
-      if (e.target === this) this.style.display = 'none';
-    }
-  </script>
 </body>
 </html>
