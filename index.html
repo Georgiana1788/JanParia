@@ -46,6 +46,31 @@
       color: white;
       font-size: 1.5rem;
       user-select: none;
+          }
+    .arrow:hover {
+      background: rgba(0,0,0,0.6);
+    }
+    #lightbox:hover .arrow {
+      display: block;
+    }
+    .arrow.left {
+      left: 2vw;
+    }
+    .arrow.right {
+      right: 2vw;
+    }
+    #aboutCard {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border: 3px dashed #ec4899;
+      padding: 2rem;
+      max-width: 500px;
+      z-index: 9998;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
     }
     .lightbox-controls span {
       cursor: pointer;
